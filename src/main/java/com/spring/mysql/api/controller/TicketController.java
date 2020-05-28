@@ -45,20 +45,18 @@ public class TicketController {
 	
 	// modify values
 	
-	@GetMapping("/getTickets")
-	public List<Ticket> getModifiedTickets() {
-		return null;
-	
-	}
-	
-	// delete particular id and all recod values
-	
-	@GetMapping("/getTickets")
-	public List<Ticket>deleteTickets() {
-		return null;
-	
-	}
-	
-	
-
+	/*
+	 * @GetMapping("/getTickets") public List<Ticket> getModifiedTickets() { return
+	 * null;
+	 * 
+	 * }
+	 * 
+	 * // delete particular id and all recod values
+	 * 
+	 * @GetMapping("/getTickets") public List<Ticket>deleteTickets() { return null;
+	 * 
+	 * }
+	 * 
+	 * 
+	 */
 }
