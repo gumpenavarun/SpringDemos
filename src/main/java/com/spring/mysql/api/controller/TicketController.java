@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -47,22 +46,7 @@ public class TicketController {
 		return (List<Ticket>) dao.findAll();
 	}
 
-	// modify values
-
-	/*
-	 * @GetMapping("/getTickets") public List<Ticket> getModifiedTickets() { return
-	 * null;
-	 * 
-	 * }
-	 * 
-	 * // delete particular id and all recod values
-	 * 
-	 * @GetMapping("/getTickets") public List<Ticket>deleteTickets() { return null;
-	 * 
-	 * }
-	 * 
-	 * 
-	 */
+	
 	@DeleteMapping("/{id}")
 	public String delete(@PathVariable int id) {
 		if (dao.findOne(id) != null) {
@@ -82,17 +66,14 @@ public class TicketController {
 		Optional<Ticket> studentOptional = Optional.ofNullable(dao.findOne(id));
 
 		if (!studentOptional.isPresent())
-		// return ResponseEntity.notFound().build();
 		{
 			ticket.setId(id);
-			// ticket.setAmount(amount);
 			dao.save(ticket);
 		} else {
 			return "Entered id is not present in DB";
 		}
 		return "Entered " + id + " is not present in DB";
-
-		// return ResponseEntity.noContent().build();
+//thi
 
 	}
 
