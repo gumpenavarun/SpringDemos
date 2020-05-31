@@ -73,7 +73,6 @@ public class TicketController {
 			return "Entered id is not present in DB";
 		}
 		return "Entered " + id + " is not present in DB";
-//thi
 		//new line adding for commit
 
 	}
